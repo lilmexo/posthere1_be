@@ -6,10 +6,13 @@ exports.seed = function (knex) {
       // Inserts seed entries
       return knex('posts').insert([
         {
-          posts: "I have no idea if this is going to work "
+          title: "Sparta",
+          text: "I have no idea if this is going to work ",
+          user: 1
         },
         {
-          posts: "There can only be one true champion ",
+          title: "I hate DB",
+          text: "There can only be one true champion ",
           user: 3
         },
       ]);
