@@ -10,13 +10,13 @@ exports.up = function (knex) {
             tbl.increments()
             tbl.string("title", 255).notNullable();
             tbl.string("text", 255).notNullable();
-            tbl
-                .integer("user")
-                .notNullable()
-                .unsigned()
-                .references("users.id")
-                .onDelete("RESTRICT")
-                .onUpdate("CASCADE");
+            // tbl
+            //     .integer("user")
+            //     .notNullable()
+            //     .unsigned()
+            //     .references("users.id")
+            //     .onDelete("RESTRICT")
+            //     .onUpdate("CASCADE");
         })
 
         .createTable("results", tbl => {
