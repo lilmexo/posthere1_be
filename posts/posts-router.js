@@ -30,7 +30,7 @@ router.post("/:id", verifyUserId, (req, res) => {
         })
 })
 
-router.put("/updatePost/:id", verifyUserId, (req, res) => {
+router.put("/:id", verifyUserId, (req, res) => {
     const { id } = req.params;
     const updatePost = req.body;
     dbPosts.updatePost(updatePost, id)
