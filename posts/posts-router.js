@@ -21,7 +21,10 @@ router.get("/", async (req, res) => {
 
 
 router.post("/:id", verifyUserId, (req, res) => {
-    const newPost = req.body;
+
+    const userId = req.params.id;
+    const post = req.body;
+    const newPost = { ...post, user: userId }
     dbPosts.addPost(newPost)
         .then(data => {
             res.status(201).json(data)
