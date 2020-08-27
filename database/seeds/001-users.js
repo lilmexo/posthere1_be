@@ -4,15 +4,18 @@ exports.seed = function (knex) {
   const users = [
     {
       username: "Thor",
-      password: "Greek"
+      password: "Greek",
+      id: 1
     },
     {
       username: "Thanos",
-      password: "Greek"
+      password: "Greek",
+      id: 2
     },
     {
       username: "Jupiter",
-      password: "Greek"
+      password: "Greek",
+      id: 3
     },
   ]
 

@@ -8,10 +8,12 @@ exports.seed = function (knex) {
         {
           title: "Sparta",
           text: "I have no idea if this is going to work ",
+          user: 2
         },
         {
           title: "I hate DB",
           text: "There can only be one true champion ",
+          user: 1
         },
       ]);
     });
