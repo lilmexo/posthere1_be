@@ -45,7 +45,7 @@ router.post("/login", (req, res) => {
                     res.status(401).json({ message: "Invalid, You Shall Not Pass" })
                 }
             }).catch(err => {
-                res.status(500).json({ message: err.message, note: "something isnt right here" })
+                res.status(500).json({ message: err.message, note: "something isnt right here in the api" })
             })
     } else {
         res.status(400).json({ message: "please provide a username and password" })
@@ -61,7 +61,7 @@ function makeJwt(user) {
     const secret = process.env.JWT_SECRET || "Your secret is safe with me";
 
     const options = {
-        expiresIn: "1h"
+        expiresIn: "6h"
     }
     return jwt.sign(payload, secret, options)
 }

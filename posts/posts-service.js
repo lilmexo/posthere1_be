@@ -1,7 +1,7 @@
 
 
 function verifyUserId(req, res, next) {
-    console.log(req.params)
+    // console.log(req.params)
     if (req.params.id == req.jwt.subject) {
         next()
     } else {
