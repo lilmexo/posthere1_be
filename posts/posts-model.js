@@ -15,7 +15,7 @@ function findAllPosts() {
 }
 
 function find() {
-    return db("posts").select("posts.id", "posts.text", "posts.title", "users.username as name").join("users", "posts.user", "=", "users.id").orderBy("id")
+    return db("posts").select("posts.id", "posts.title", "posts.text", "users.username as name").join("users", "posts.user", "=", "users.id").orderBy("id")
 }
 
 function findBy(filter) {

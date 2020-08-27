@@ -26,6 +26,18 @@ router.get("/:id", async (req, res) => {
 
 })
 
+router.delete("/:id", (req, res) => {
+    const { id } = req.params;
+    dbUsers.deleteUser(id)
+
+        .then(data => {
+            res.status(200).json({ "deleted successfully": data })
+        }).catch(err => {
+            res.status(500).json({ err, message: "Unable to delte" })
+        })
+
+
+})
 
 
 module.exports = router; 
