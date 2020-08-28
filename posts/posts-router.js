@@ -17,6 +17,20 @@ router.get("/", async (req, res) => {
         res.status(500).json({ err: "server error" })
     }
 })
+router.get("/:id", async (req, res) => {
+    const { id } = req.params;
+    try {
+        const data = await dbPosts.findById(id)
+        if (data) {
+            res.status(200).json(data)
+        } else {
+            res.status(404).json({ err: "Couldn't find the post" })
+        }
+    } catch (err) {
+        res.status(500).json({ err: "Server Error" });
+    }
+
+})
 
 
 
