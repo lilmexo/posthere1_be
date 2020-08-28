@@ -6,7 +6,7 @@ const dbUsers = require("./users-model");
 router.get("/", (req, res) => {
     dbUsers.find()
         .then(users => {
-            res.status(200).json({ data: users, jwt: req.jwt, it: "worked!" })
+            res.status(200).json({ data: users, jwt: req.jwt })
         })
         .catch(err => res.send(err))
 });
