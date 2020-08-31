@@ -20,7 +20,7 @@ router.get("/", async (req, res) => {
 router.get("/:id", async (req, res) => {
     const { id } = req.params;
     try {
-        const data = await dbPosts.findById(id)
+        const data = await dbPosts.findByUserId(id)
         if (data) {
             res.status(200).json(data)
         } else {

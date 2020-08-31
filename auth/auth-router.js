@@ -40,7 +40,7 @@ router.post("/login", (req, res) => {
                 console.log("user: ", user)
                 if (user && bcryptjs.compareSync(password, user.password)) {
                     const token = makeJwt(user)
-                    res.status(200).json({ message: "Welcome Chosen One", token })
+                    res.status(200).json({ message: "Welcome Chosen One", token, id: user.id })
                 } else {
                     res.status(401).json({ message: "Invalid, You Shall Not Pass" })
                 }
