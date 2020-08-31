@@ -7,7 +7,8 @@ module.exports = {
     findBy,
     findById,
     updatePost,
-    deletePost
+    deletePost,
+    findByUserId
 }
 
 function findAllPosts() {
@@ -16,6 +17,9 @@ function findAllPosts() {
 
 function find() {
     return db("posts").select("posts.id", "posts.title", "posts.text", "users.username as name").join("users", "posts.user", "=", "users.id").orderBy("id")
+}
+function findByUserId(id) {
+    return db("posts").where("user", id).orderBy("id")
 }
 
 function findBy(filter) {
