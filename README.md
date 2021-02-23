@@ -23,9 +23,8 @@ https://posthere1-fe.vercel.app/
 
 | PROPERTY               | TYPE              | EXAMPLE          | Notes                          |
 | :-------------------   | :---------------- | :--------------  | :----------------------------- |
-| username               |  string           | "username"       | required                       |
-| password               |  string           | "password"       | required                       |
-
+|lilmexo             |    api/auth/register         | "lilmexo"       |I'm short and cooler  than  a fan                 |
+|1nevertrumper          |  api/auth/register         | "1nevertrumper"       |I'm short and cooler  than  a fan                  |
 
 ## LOGIN DATA
 
