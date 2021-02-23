@@ -1,5 +1,5 @@
 # posthere1_be
-post here 1 backend
+Team collaborative React web application that uses an algorithm to help users post their comments on Reddit
 
 
  Action                      | URL                        | Method | Response           |
